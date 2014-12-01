@@ -1,3 +1,7 @@
 Template.dashboard.helpers
-  count: ->
-      Containers.find({}).count()
+  containers: ->
+    Containers.find()
+  images: ->
+    Images.find()
+  hosts: ->
+    Hosts.find()
