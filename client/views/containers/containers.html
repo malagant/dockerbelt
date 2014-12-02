@@ -1,0 +1,33 @@
+<template name="containers">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Containers</h5>
+        </div>
+        <div class="ibox-content">
+            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                <thead>
+                <tr>
+                    <th>Status</th>
+                    <th>Id</th>
+                    <th>Image</th>
+                    <th>Names</th>
+                    <th>Ports</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each containers}}
+                    <tr class="odd gradeX">
+                        <td>{{Status}}</td>
+                        <td title="{{Id}}"><a href="{{pathFor 'containerDetails'}}">{{truncate Id 6 }}</a></td>
+                        <td>{{Image}}</td>
+                        <td>{{Names}}</td>
+                        <td>{{flatten Ports}}</td>
+                        <td><a href="{{ pathFor 'containerDetails'}}"><i class="fa fa-gear fa"></i></a></td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>

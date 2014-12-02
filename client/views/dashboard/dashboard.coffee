@@ -5,3 +5,8 @@ Template.dashboard.helpers
     Images.find()
   hosts: ->
     Hosts.find()
+
+Template.dashboard.events
+  'click #container-box': (event) ->
+    event.preventDefault()
+    Router.go 'containers'
