@@ -1,3 +1,3 @@
 Template.containers.helpers
-  containers: ->
+  data: ->
       Containers.find()

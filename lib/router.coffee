@@ -8,6 +8,7 @@ Router.route '/', name: 'dashboard', waitOn: ->
   Meteor.subscribe('images')
   Meteor.subscribe('hosts')
 Router.route '/containers', name: 'containers'
+Router.route '/containers/:_id', name: 'container'
 Router.route '/settings', name: 'settings'
 Router.route '/images', name: 'images'
 Router.route '/hosts', name: 'hosts'
@@ -17,3 +18,5 @@ Router.route '/hosts/:_id', name: 'host-details', ->
 
 Router.route '/users/sign_up', name: 'registerUser', layoutTemplate: 'registrationLayout'
 Router.route '/users/sign_in', name: 'loginUser', layoutTemplate: 'loginLayout'
+
+Router.onBeforeAction 'loading'

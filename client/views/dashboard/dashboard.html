@@ -8,6 +8,9 @@
                 <div class="ibox-content">
                     <h1 class="no-margins">{{ containers.count }}</h1>
                     <small>Containers</small>
+                    <div class="text-right">
+                        <a href="{{pathFor 'containers'}}" class="btn btn-primary">Details</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -19,6 +22,9 @@
                 <div class="ibox-content">
                     <h1 class="no-margins">{{ images.count }}</h1>
                     <small>Images</small>
+                    <div class="text-right">
+                        <a href="{{pathFor 'images'}}" class="btn btn-primary">Details</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,6 +36,9 @@
                 <div class="ibox-content">
                     <h1 class="no-margins">{{ hosts.count }}</h1>
                     <small>Hosts</small>
+                    <div class="text-right">
+                        <a href="{{pathFor 'hosts'}}" class="btn btn-primary">Details</a>
+                    </div>
                 </div>
             </div>
         </div>
