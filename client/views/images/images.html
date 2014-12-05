@@ -1,0 +1,33 @@
+<template name="images">
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Images</h5>
+        </div>
+        <div class="ibox-content">
+            <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                <thead>
+                <tr>
+                    <th>Created</th>
+                    <th>Id</th>
+                    <th>ParentId</th>
+                    <th>RepositoryTags</th>
+                    <th>VirtualSize</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {{#each images}}
+                    <tr class="odd gradeX">
+                        <td>{{prettifyDate Created}}</td>
+                        <td title="{{Id}}">{{truncate Id 6 }}</td>
+                        <td title="{{ParentId}}">{{truncate ParentId 6 }}</td>
+                        <td>{{RepoTags}}</td>
+                        <td>{{VirtualSize}}</td>
+                        <td><a href="{{ pathFor 'containerDetails'}}"><i class="fa fa-gear fa"></i></a></td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</template>
