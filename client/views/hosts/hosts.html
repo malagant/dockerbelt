@@ -1,0 +1,9 @@
+<template name="hosts">
+    <button type="button" id="add-host" class="btn btn-primary btn-circle pull-right"><i class="fa fa-plus"></i></button>
+    <h1>Hosts</h1>
+    <div class="row">
+        {{#each hosts}}
+            {{> host}}
+        {{/each}}
+    </div>
+</template>

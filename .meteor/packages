@@ -19,6 +19,5 @@ insecure
 underscore
 mrt:underscore-string-latest
 velocity:html-reporter
-sanjo:jasmine
-dburles:factory
-
+mizzao:bootboxjs
+mike:mocha

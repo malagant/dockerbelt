@@ -1,0 +1,18 @@
+<template name="host">
+    <div class="col-lg-3">
+        <div id="host-box" class="widget navy-bg no-padding">
+            <div class="p-m">
+                <div id="delete-host" class="close"><i class="fa-trash-o fa"></i></div>
+                <div id="favorite-host" class="close" style="margin-right: 5px;"><i
+                        class="{{#if favorite}}fa-bookmark{{else}}fa-bookmark-o{{/if}} fa"></i>
+                </div>
+                <h1 class="m-xs">{{ name }}</h1>
+
+                <h3 class="font-bold no-margins">
+                    {{ ip }}:{{ port}}
+                </h3>
+                <small>Status {{ status }}</small>
+            </div>
+        </div>
+    </div>
+</template>

@@ -24,3 +24,6 @@ if Images.find().count() == 0
   Images.insert {"Created":1413648787,"Id":"67e9dfffae7fe8b462873bc3597f29143f38919b3c9a95e87c8c710b14f336cb","ParentId":"cebb1a25da799c5fc80ed2099d69f4a424df04c0f451dc620c24307c810e3e31","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":1704717403}
   Images.insert {"Created":1413647950,"Id":"79e3a1dfab0435a26af77b7b7b064d57bb38e97da8c0cc4d670df1f52f192818","ParentId":"c5881f11ded97fd2252adf93268114329e985624c5d7bb86e439a36109d1124e","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":172064416}
   Images.insert {"Created":1413645867,"Id":"b64733e647751aa67f08798cfa6e8103f06cec8e226d5ddde4566cef9d54d96f","ParentId":"f5a2ad9218f4c3ea7772c718bb3eb44fa8a7398382ee825980bb371b5399dc7e","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":1711120947}
+
+if Hosts.find().count() == 0
+  Hosts.insert { 'ip':'127.0.0.1', 'port':'2375', 'name':'localhost', favourite: true }

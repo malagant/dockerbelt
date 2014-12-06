@@ -7,6 +7,12 @@ Template.dashboard.helpers
     Hosts.find()
 
 Template.dashboard.events
-  'click #container-box': (event) ->
+  'click #containers-box': (event) ->
     event.preventDefault()
     Router.go 'containers'
+  'click #images-box': (event) ->
+    event.preventDefault()
+    Router.go 'images'
+  'click #hosts-box': (event) ->
+    event.preventDefault()
+    Router.go 'hosts'

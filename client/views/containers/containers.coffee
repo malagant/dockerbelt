@@ -1,5 +1,8 @@
 Template.containers.helpers
   containers: ->
-     c = window.Containers.find().fetch()
-     console.log(c)
-     return c
+    Containers.find()
+
+Template.containers.events
+  'click .table > tbody > tr > td': (e) ->
+    e.preventDefault()
+    Router.go('container', _id: @e.target._id)

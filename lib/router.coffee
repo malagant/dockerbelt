@@ -11,8 +11,8 @@ Router.route '/', name: 'dashboard', waitOn: ->
 Router.route '/containers', name: 'containers', waitOn: ->
   Meteor.subscribe('containers')
 
-Router.route '/containers/:_id', name: 'container', waitOn: ->
-  Meteor.subscribe('containers')
+Router.route '/containers/:_id', name: 'container', data: ->
+  Containers.find(@params._id)
 
 Router.route '/settings', name: 'settings'
 Router.route '/images', name: 'images', waitOn: ->
