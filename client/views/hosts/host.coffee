@@ -9,9 +9,9 @@ Template.host.events
     UserSession.set 'dockerHost', host.url, Meteor.userId()
     Meteor.call 'switchHost', ->
       Router.go 'dashboard'
-  'click #favorite-host': ->
+  'click #favourite-host': ->
     host = Hosts.find(@._id).fetch()[0]
-    if host.favorite == true
-      Hosts.update @._id, { $set : { favorite : false }}
+    if host.favourite == true
+      Hosts.update @._id, { $set : { favourite : false }}
     else
-      Hosts.update @._id, { $set : { favorite : true }}
+      Hosts.update @._id, { $set : { favourite : true }}

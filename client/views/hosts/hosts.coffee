@@ -37,10 +37,10 @@ Template.hosts.events
                                       </div>
                                       <div class="form-group well">
                                           <div class="checkbox">
-                                              <label><input type="checkbox" name="docker-favorite" checked="checked">
-                                                  Favorite</label>
+                                              <label><input type="checkbox" name="docker-favourite" checked="checked">
+                                                  favourite</label>
                                           </div>
-                                          <p class="help-block">Make this a on of your favorite host entries.</p>
+                                          <p class="help-block">Make this a on of your favourite host entries.</p>
                                           <div class="checkbox">
                                               <label><input type="checkbox">
                                                   Show all containers</label>
@@ -68,6 +68,6 @@ Template.hosts.events
     bootbox.dialog(message: hostForm, backdrop: false, title: 'Add a new docker host', buttons: { success: { label: 'Cancel'}, main: { label: 'Create', callback: ->
       name = $('[name=docker-name]')
       host = $('[name=docker-host-url]')
-      favorite = $('[name=docker-favorite]')
-      Hosts.insert(name: name.val(), url: host.val(), favorite: favorite.val())
+      favourite = $('[name=docker-favourite]')
+      Hosts.insert(name: name.val(), url: host.val(), favourite: favourite.val())
     }})

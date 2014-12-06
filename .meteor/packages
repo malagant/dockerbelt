@@ -20,4 +20,5 @@ underscore
 mrt:underscore-string-latest
 velocity:html-reporter
 mizzao:bootboxjs
-mike:mocha
+sanjo:jasmine
+
