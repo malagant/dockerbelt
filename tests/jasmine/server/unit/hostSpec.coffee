@@ -3,3 +3,9 @@ describe 'Host', ->
     spyOn(Hosts, 'insert').and.returnValue(1)
     Meteor.methodMap.createHost('127.0.0.1', 2375, 'localhost', true)
     expect(Hosts.insert).toHaveBeenCalledWith('ip': '127.0.0.1', 'port': 2375, 'name': 'localhost', 'favourite': true)
+
+  it 'should not be created with invalid attributes', ->
+    spyOn(Hosts, 'insert').and.returnValue(1)
+    Meteor.methodMap.createHost('127.0.0', 2375, 'spacken')
+    expect(Hosts.insert).not.toHaveBeenCalled()
+
