@@ -21,5 +21,6 @@ mrt:underscore-string-latest
 velocity:html-reporter
 mizzao:bootboxjs
 sanjo:jasmine
-copleykj:mesosphere
+aldeed:collection2
+aldeed:autoform
 

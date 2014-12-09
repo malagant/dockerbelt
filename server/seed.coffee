@@ -26,4 +26,4 @@ if Images.find().count() == 0
   Images.insert {"Created":1413645867,"Id":"b64733e647751aa67f08798cfa6e8103f06cec8e226d5ddde4566cef9d54d96f","ParentId":"f5a2ad9218f4c3ea7772c718bb3eb44fa8a7398382ee825980bb371b5399dc7e","RepoTags":["\u003cnone\u003e:\u003cnone\u003e"],"Size":0,"VirtualSize":1711120947}
 
 if Hosts.find().count() == 0
-  Hosts.insert { 'ip':'127.0.0.1', 'port':'2375', 'name':'localhost', favourite: true }
+  Hosts.insert { 'ip':'127.0.0.1', 'port':'2375', 'name':'localhost', favourite: true, 'description': 'My Description' }

@@ -6,6 +6,10 @@ Package.describe({
 });
 
 Package.on_use(function (api) {
-	api.add_files("tests/mocha/server/sampleServerTest.coffee",["server"]);
-	api.add_files("tests/mocha/client/sampleClientTest.coffee",["client"]);
+	api.use("coffeescript", ["client", "server"]);
+	api.add_files("tests/jasmine/server/integration/sample/spec/hostsSpec.coffee",["server"]);
+	api.add_files("tests/jasmine/server/integration/sample/spec/PlayerSpec.js",["server"]);
+	api.add_files("tests/jasmine/server/integration/sample/spec/SpecMatchers.js",["server"]);
+	api.add_files("tests/jasmine/server/integration/sample/src/Player.js",["server"]);
+	api.add_files("tests/jasmine/server/integration/sample/src/Song.js",["server"]);
 });

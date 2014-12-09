@@ -1,10 +1,8 @@
 Meteor.methods
-  createHost: (ip, port, name, favourite) ->
-    rawData = {'ip': ip, 'port': port, 'name': name, 'favourite': favourite}
+  createHost: (ip, port, name, favourite, description) ->
+    rawData = {'ip': ip, 'port': port, 'name': name, 'favourite': favourite, 'description': description}
 
-    validationObject = Mesosphere.hostForm.validate(rawData)
-
-    if validationObject.errors == false
+    if Hosts.simpleSchema().namedContext().validate(rawData)
       Hosts.insert rawData
     else
-      console.log(errors)
+      console.log("FUCK")
